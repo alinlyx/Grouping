@@ -22,10 +22,9 @@ module adder_8(operand1,operand2,add_or_sub,sum,overflow);
     input add_or_sub;      
     output [7:0]sum;     
     output overflow;
-
     wire [8:0] c;           
     wire [8:0] op2;          
-
+    
     assign op2[0] = add_or_sub ^ operand2[0];
     assign op2[1] = add_or_sub ^ operand2[1];
     assign op2[2] = add_or_sub ^ operand2[2];
